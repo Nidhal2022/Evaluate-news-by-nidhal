@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Test</title>
+    <!--<link rel="stylesheet" href="/styles/resets.css">
+        <link rel="stylesheet" href="/styles/base.css">
+        <link rel="stylesheet" href="/styles/header.css">
+        <link rel="stylesheet" href="/styles/form.css">
+        <link rel="stylesheet" href="/styles/footer.css">-->
+</head>
+
+<body>
+
+    <header>
+        <div class="">
+            <h1>This is a Sentiment Analysis website-NLP</h1>
+        </div>
+        <div class="">
+            <navigation>
+                
+            </navigation>
+        </div>
+    </header>
+   
+    <main>
+        <section>
+            <!--https://learn.udacity.com/nanodegrees/nd0011-mtcit-oman/parts/cd0430/lessons/680be5e4-4a55-4aac-b626-8844a76f976c/concepts/ec829616-d81f-42e9-9666-4ff546557fe0
+            -->
+            <form id="articleForm" onsubmit="return Client.handleSubmit(event)">
+                <input id="articleUrl" type="text" name="input" value="" placeholder="Enter Article URL">
+                <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return handleSubmit(event)">
+            </form>
+                   
+        </section>
+
+        <section>
+            <div id="results">
+                <h2>Sentiment Analysis Results</h2>
+                <p><strong>Agreement:</strong> <span id="agreement"></span></p>
+                <p><strong>Polarity:</strong> <span id="polarity"></span></p>
+                <p><strong>Confidence:</strong> <span id="confidence"></span></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>By Nidhal Ali Copyright © 2034 </p>
+    </footer>
+    <script>
+        // Check that service workers are supported
+        if ('serviceWorker' in navigator) {
+            // Use the window load event to keep the page load performant
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js');
+            });
+        }
+    </script>
+    
+</body>
+
+
+</html>
